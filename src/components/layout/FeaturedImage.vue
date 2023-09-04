@@ -1,16 +1,14 @@
 <template>
   <div class="featured-image">
-    <the-header></the-header>
+    <the-header style="background-image: none; background-color: transparent;"></the-header>
     <the-title></the-title>
   </div>
 </template>
 
 <script>
-import TheHeader from '../subComp/TheHeader.vue'
-import TheTitle from '../subComp/TheTitle.vue'
+import TheTitle from '../subComp/header/TheTitle.vue'
 export default {
   components: {
-    TheHeader,
     TheTitle,
   }
 }

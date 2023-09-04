@@ -2,13 +2,17 @@
   <div>
     <h3>Book for a Consultation</h3>
     <p>We will prepare a proposal and walk you through every step of the process</p>
-    <button>Book and Consultation</button>
+    <button @click="consultation">Book and Consultation</button>
   </div>
 </template>
 
 <script>
 export default {
-
+  methods: {
+    consultation(){
+      this.$router.push('/consultation')
+    }
+  }
 }
 </script>
 

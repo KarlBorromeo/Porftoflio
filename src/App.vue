@@ -1,21 +1,12 @@
 <template>
-  <!-- <div> -->
-    <featured-image></featured-image>
-    <home-body></home-body>
-    <the-footer></the-footer>
-  <!-- </div> -->
-  
+  <router-view></router-view>
 </template>
 
 <script>
-import FeaturedImage from './components/layout/FeaturedImage.vue'
-import HomeBody from './components/layout/HomeBody.vue'
-import TheFooter from './components/layout/TheFooter.vue'
+
 export default {
   components: {
-    FeaturedImage, 
-    HomeBody,
-    TheFooter,
+    // TheHome, 
   },
 }
 </script>

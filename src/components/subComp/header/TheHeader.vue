@@ -1,7 +1,9 @@
 <template>
   <div>
     <span>
-        <img src="../../assets/logo2.png">
+      <router-link to="/">
+        <img src="../../../assets/logo2.png">
+      </router-link>  
     </span>
     <span>
       <navigation-col class="nav-col"></navigation-col>
@@ -36,7 +38,12 @@ img{
   max-width: 200px
 }
 div{
-    background-color: transparent;
+    background-image: url(../../../assets/aw.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #4429345b;
+    background-blend-mode: darken;
+    background-position: top;
     display: flex;
     justify-content: space-between;
     align-items: center;

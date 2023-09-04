@@ -3,14 +3,21 @@
         <font-awesome-icon icon="fa-solid fa-bars" class="bars" size="2x" @click="showCol('auto',true)" />
         <div class="nav-cols" v-if="navVisible">          
             <header>
-              <h3>{{ title }}</h3>
+              <router-link to="/home" @click="showCol('hidden',false)">
+                <h3>{{ title }}</h3>
+              </router-link>
+              
+              <!-- <img src="../../assets/logo2.png"> -->
               <font-awesome-icon icon = "fa-solid fa-x" size="1x" @click="showCol('hidden',false)"></font-awesome-icon>
             </header>
+            <!-- <span>
+                <img src="../../assets/logo2.png">
+            </span> -->
             <ul>
-              <li>About</li>
-              <li>Services</li>
-              <li>Gallery</li>
-              <li>Book a Consultation</li>
+              <router-link to="/about" @click="showCol('hidden',false)">About</router-link>
+              <router-link to="/gallery" @click="showCol('hidden',false)">Gallery</router-link>
+              <router-link to="/services" @click="showCol('hidden',false)">Services</router-link>
+              <router-link to="/consultation" @click="showCol('hidden',false)">Boox a Consultation</router-link>
             </ul>
           </div>
     </span>
@@ -31,7 +38,6 @@ export default {
           top: 0,
           behavior: 'smooth', // Add smooth scrolling animation
         });
-        // this.$store.commit('setNavCol',false)
       }
     },
     computed:{
@@ -43,6 +49,16 @@ export default {
 </script>
 
 <style scoped>
+.router-link-active{
+  font-weight: 900;
+  color: black;
+  text-decoration: underline;
+}
+img{
+  min-width: 70px;
+  width: 15vw;
+  max-width: 200px
+}
 header{
     padding: 2rem 1.5rem;
     box-sizing: border-box;
@@ -87,10 +103,14 @@ ul{
   justify-content: center;
   flex-direction: column;
 }
-li{
+a{
   margin: 1rem 0;
-  font-weight: 700;
+  font-weight: 400;
   font-size: larger;
+  text-decoration: none;
+}
+h3{
+  font-weight: 900;
 }
 
 @keyframes bg-change {

@@ -4,10 +4,9 @@
 </template>
 
 <script>
-import ConsultationCard from '../subComp/ConsultationCard.vue'
-import ContactCard from '../subComp/ContactCard.vue'
+import ConsultationCard from '../subComp/footer/ConsultationCard.vue'
 export default {
-  components: { ConsultationCard, ContactCard },
+  components: { ConsultationCard},
 
 }
 </script>
