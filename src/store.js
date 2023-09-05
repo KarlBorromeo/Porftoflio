@@ -4,6 +4,7 @@ const store = createStore({
     state(){
         return{
             agencyName: 'Iron-Dev',
+            image: '../../assets/portrait.jpg',
             projectGallery: [
                 {
                     id: 'A',
@@ -26,46 +27,59 @@ const store = createStore({
                     expertise: 'Circuit Design',
                     degree: 'Bachelor of Science in ECE',
                     description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
-                    image: '../../assets/portrait.jpg'
+                    image: 'aw'
                 },
                 {
                     name: 'Karl Borromeo',
                     expertise: 'Frontend Developer',
                     degree: 'Bachelor of Science in Computer Science',
                     description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
-                    image: '../../assets/portrait.jpg'
+                    image: 'portrait'
                 },
                 {
                     name: 'Reynard Torculas',
                     expertise: 'Backend Developer',
                     degree: 'Bachelor of Science in Computer Science',
                     description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
-                    image: '../../assets/portrait.jpg'
+                    image: 'landscape'
                 },
             ],
             services:[
                 {
                     serviceName: 'Web Development',
-                    serviceIcon: 'assets/portrait.jpg',
-                    description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
+                    serviceIcon: 'portrait',
+                    description: `aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq
+                                  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji
+                                   fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf
+                                    wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda`,
                     tools: ['VueJS', 'ExpressJS', 'Firebase'],
                 },
                 {
                     serviceName: 'Mobile App Development',
-                    serviceIcon: 'assets/portrait.jpg',
-                    description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
+                    serviceIcon: 'aw',
+                    description: `aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq
+                                fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq 
+                                fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  
+                                fdasf wqrewq rweqrweqr werfsda`,
                     tools: ['Flutter', 'Android Studio']
                 },
                 {
-                    serviceName: 'Engineering Services',
-                    serviceIcon: '@/assets/portrait.jpg',
-                    description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
-                    tools: ['IMAGE']
+                    serviceName: 'Electronics Engineering Services',
+                    serviceIcon: 'landscape',
+                    description: `aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  
+                                    fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji 
+                                    fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq 
+                                    rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  
+                                    fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  
+                                    fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda 
+                                    aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda`,
+                    tools: ['Circuit Design']
                 },
                 {
                     serviceName: 'Machine Learning & Deep Learning',
-                    serviceIcon: '../../assets/portrait.jpg',
-                    description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
+                    serviceIcon: 'aw',
+                    description: `aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  
+                                    fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda`,
                     tools: ['Keras', 'Tensorflow', 'Pytorch']
                 }
             ]
@@ -83,6 +97,9 @@ const store = createStore({
         },
         service(state){
             return state.services
+        },
+        img(state){
+            return state.image
         }
     }
 })

@@ -17,6 +17,9 @@
           :expertise="profile.expertise"
           :profileImage="profile.image"
         />
+        <!-- <img :src="profile.image" alt="none">       
+        {{profile.image}}
+        <img src="../../assets/portrait.jpg"> -->
       </ul>
     </div>
     <contact-card></contact-card>

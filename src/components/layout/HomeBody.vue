@@ -97,38 +97,41 @@ div h2{
   flex-direction: column;
   gap: .5rem;
   text-align: center;
-  color: white;
+  /* color: white; */
+  visibility: hidden;
   font-size: clamp(.8rem, 1.5vw, 3rem);
 }
 
 .grid-item-left{
+  visibility: visible;
   animation: fromleft 1.3s ease-in forwards;
 } 
 .grid-item-right{
+  visibility: visible;
   animation: fromright 1.3s ease-in forwards;
 } 
 @keyframes fromleft {
   0%{
     transform: translateX(-200px);
     opacity: 0;
-    color: black;
+    /* color: black; */
   }
   100%{
     transform: translateX(0px);
     opacity: 1;
-    color: black;
+    /* color: black; */
   }
 }
 @keyframes fromright {
   0%{
     transform: translateX(200px);
     opacity: 0;
-    color: black;
+    /* color: black; */
   }
   100%{
     transform: translateX(0px);
     opacity: 1;
-    color: black;
+    /* color: black; */
   }
 }
 

@@ -1,29 +1,45 @@
 <template>
-  <div class="card">
+  <div class="sub-container">
     <header class="header">
-      <span><img src='../../../assets/portrait.jpg'></span>
-      <h3>{{ serviceName }}</h3>
+      <h3 class="title">{{ serviceName }}</h3>
+      <img :src='image'>
     </header>
-    <p>{{ description }}</p>
+    <p><span class="indent"></span>{{ description }}</p>
     <section>
       <ul v-for="tool in tools" :key="tool">
-          <li>{{ tool }}</li>
+          <li class="tool">{{ tool }}</li>
       </ul>
     </section>
   </div>
 </template>
 
 <script>
+  import portraitImage from '@/assets/portrait.jpg';
+  import landscapeImage from '@/assets/landscape.jpg'
+  import awImage from '@/assets/aw.jpg'
 export default {
-    props: ['serviceName', 'serviceIcon', 'description', 'tools']
+    props: ['serviceName', 'serviceIcon', 'description', 'tools'],
+    computed: {
+        image(){
+          if(this.serviceIcon === 'aw'){
+            return awImage;
+          }else if(this.serviceIcon === 'portrait'){
+            return portraitImage
+          }else{
+            return landscapeImage
+          }
+        }
+      },
 }
 </script>
 
 <style scoped>
-.card{
-    width: 75%;
+.sub-container{
+    visibility: hidden;
+    width: 80%;
+    min-width: 300px;
     margin: 1rem auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 1rem;
     box-sizing: border-box;
 }
@@ -31,43 +47,75 @@ export default {
     display: flex;
     align-items: center;
     gap: .5rem;
-    /* padding: 1rem 0; */
-    /* height: 20%; */
-    /* border: 1px solid black; */
+    flex-direction: row-reverse;
+    justify-content: start;
 }
-span{
+.image-container{
+  width: 8vw;
+  height: 8vw;
+  min-width: 60px;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+} 
+.indent{
+  display: inline-block;
+  width: 2rem;
+}
+img{
   width: 7vw;
   height: 7vw;
   min-width: 50px;
   min-height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} 
-img{
-  width: 5vw;
-  height: 5vw;
-  min-width: 40px;
-  min-height: 40px;
   border-radius: 10px;
-  /* box-shadow: 0 1px 10px 1px rgb(135, 134, 134); */
 }
 img:hover{
-  animation: grow 0.2s ease-in forwards ;
-  box-sizing: border-box;
+  animation: grow 0.1s ease-in forwards ;
 }
+section{
+  padding: 0 1rem;
+}
+ul{
+  list-style-type: disc;
+}
+h3{
+  margin: 0 .5rem;
+}
+.title:hover + img{
+  animation: grow 0.1s ease-in-out forwards ;
+}
+.title:hover{
+  text-decoration: underline;
+}
+.tool{
+  font-style: oblique;
+}
+
 @keyframes grow {
   0%{
-    width: 5vw;
-    height: 5vw;
-    min-width: 40px;
-    min-height: 40px;
+    transform: scale(1);
+    border-radius: 10px;
+    box-shadow: 0 0 0 0 gray
   }
   100%{
-    width: 7vw;
-    height: 7vw;
-    min-width: 50px;
-    min-height: 50px;
+    transform: scale(1.2,1.2);
+    box-shadow: 0 0 5px .5px black;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h3{
+    font-size: 1.5rem;
+  }
+  p{
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  p{
+    line-height: 2em;
   }
 }
 </style>
