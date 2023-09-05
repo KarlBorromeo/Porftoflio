@@ -4,7 +4,7 @@
       <router-link to="/about">About</router-link>
       <router-link to="/gallery">Gallery</router-link>
       <router-link to="/services">Services</router-link>
-      <router-link to="/consultation">Boox a Consultation</router-link>
+      <router-link to="/consultation">Book a Consultation</router-link>
       </ul>
   </span>
 </template>

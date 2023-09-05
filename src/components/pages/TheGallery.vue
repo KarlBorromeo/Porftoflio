@@ -2,22 +2,22 @@
     <the-header></the-header>
     <div class="container">
       <div @click="toggleProjects" class="dropdownProjects" :class="{shadedProj: shadedProj}">
-        <h4>Show Projects</h4>
+        <h5>Show Projects</h5>
         <font-awesome-icon icon = "fa-solid fa-caret-down" size="1x" v-if="!isProjectVisible"/>
         <font-awesome-icon icon = "fa-solid fa-caret-up" size="1x"  v-if="isProjectVisible"/>
       </div>
       <ul v-if=" isProjectVisible">
-        <li v-for="project in projects" :key="project.id">
+        <li v-for="project, index in projects" :key="project.id">
           <project-card
           :title="project.title"
           :description="project.description"
-          :dateFinished="project.dateFinished"
-          :outputImages="project.outputImages"/>
+          :outputImages="project.outputImages"
+          :number="index"/>
         </li>
       </ul>
 
       <div @click="toggleProfile" class="dropdownProfiles" :class="{shadedProf: shadedProf}">
-        <h4>Show Profiles</h4>
+        <h5>Developers and Engineers</h5>
         <font-awesome-icon icon = "fa-solid fa-caret-down" size="1x" v-if="!isProfileVisible"/>
         <font-awesome-icon icon = "fa-solid fa-caret-up" size="1x"  v-if="isProfileVisible"/>
       </div>

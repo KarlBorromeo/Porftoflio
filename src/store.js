@@ -15,38 +15,49 @@ const store = createStore({
             projectGallery: [
                 {
                     id: 'A',
-                    title: 'SAMPLE TITLE',
-                    description: 'lorem lores aaw dfa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw dflorem lores aaw dfa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw df',
-                    dateFinished: 'June 25 2000',
-                    outputImages: "../../assets/landscape.jpg",
+                    title: 'Classification of Cacao Ripeness Using Convolutional Neural Network',
+                    description: `lorem lores aaw dfa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw dflorem lores aaw dfa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw df
+                                fa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw df`,
+                    outputImages: ['aw','portrait'],
                 },
                 {
                     id: 'B',
-                    title: 'SAMPLE TITLE SECOND',
+                    title: 'Automatic Notification System',
                     description: 'lorem lores aaw dfa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw dflorem lores aaw dfa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw df',
-                    dateFinished: 'July 24 2023',
-                    outputImages: '../../assets/portrait.jpg',
+                    outputImages: ['landscape'],
+                },
+                {
+                    id: 'C',
+                    title: 'Automated Solar Panel Cleaning System',
+                    description: 'lorem lores aaw dfa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw dflorem lores aaw dfa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw df',
+                    outputImages: ['landscape','aw'],
+                },
+                {
+                    id: 'D',
+                    title: 'Automated Washing Machine Using DC Motor',
+                    description: 'lorem lores aaw dfa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw dflorem lores aaw dfa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw df',
+                    outputImages: ['aw','portrait','landscape'],
                 },
             ],
             profileGallery: [
                 {
-                    name: 'Jhaerix Borromeo',
-                    expertise: 'Circuit Design',
-                    degree: 'Bachelor of Science in ECE',
+                    name: 'Engr. Jhaerix Borromeo',
+                    expertise: ['Circuit Design','Arduino Programming','PCB Design'],
+                    degree: '(BSECE)-Bachelor of Science in Electronics and Communication Engineering',
                     description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
                     image: 'aw'
                 },
                 {
                     name: 'Karl Borromeo',
-                    expertise: 'Frontend Developer',
-                    degree: 'Bachelor of Science in Computer Science',
+                    expertise: ['Frontend Developer','Mobile Application Developer','Machine Learning Engineer'],
+                    degree: '(BSCS)-Bachelor of Science in Computer Science',
                     description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
                     image: 'portrait'
                 },
                 {
                     name: 'Reynard Torculas',
-                    expertise: 'Backend Developer',
-                    degree: 'Bachelor of Science in Computer Science',
+                    expertise: ['Backend Developer','Mobile Application Developer','Machine Learning Engineer'],
+                    degree: '(BSCS)-Bachelor of Science in Computer Science',
                     description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
                     image: 'landscape'
                 },
@@ -71,7 +82,7 @@ const store = createStore({
                     tools: ['Flutter', 'Android Studio']
                 },
                 {
-                    serviceName: 'Electronics Engineering Services',
+                    serviceName: 'Engineering Services',
                     serviceIcon: 'landscape',
                     description: `aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  
                                     fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji 

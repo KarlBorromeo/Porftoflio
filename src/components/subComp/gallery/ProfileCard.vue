@@ -1,12 +1,13 @@
 <template>
     <div class="card">
       <header>
-        <img :src="image" alt="CANNOT LOAD IMAGE"><h3>{{ name }}</h3>
+        <img :src="image" alt="CANNOT LOAD IMAGE"><h5>{{ name }}</h5>
       </header>
-      <h5>{{ expertise }}</h5>
-      <h5>{{ degree }}</h5>
+      <h6>{{ degree }}</h6>
       <p><span class="indent"/>{{ description }}</p>  
-      
+      <ul v-for="expert in expertise" :key="expert">
+        <li>{{ expert }}</li>
+      </ul>
     </div>
   </template>
   
@@ -34,8 +35,12 @@
   <style scoped>
   .card{
       width: 73%;
-      margin: 1rem auto;
-      border: 1px solid black;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: .2rem;
+      justify-content: center;
+      align-content: center;
       /* background-color: red; */
   }
   .card header{
@@ -46,8 +51,34 @@
     gap: .5rem;
   }
   img{
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
+  width: 7vw;
+  height: 7vw;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 100%;
   }
+  .indent{
+    display: inline-block;
+    width: 2rem;
+  }
+  ul{
+    padding-left: 1rem;
+    font-weight: 600;
+    list-style-type: disc;
+  }
+  h5{
+    font-size: clamp(1rem, 2.5vw, 2rem);
+  }
+  h6{
+    font-size: clamp(.8rem, 2vw, 1.5rem);
+  }
+  p{
+    font-size: clamp(.9rem, 1.5vw, 1.5rem);
+    line-height: 1.3rem;
+  }
+  @media screen and (min-width: 768px) {
+  p{
+    line-height: 1.5rem;
+  }
+}
   </style>
