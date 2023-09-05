@@ -6,7 +6,7 @@
         :serviceName="service.serviceName"
         :serviceIcon="service.serviceIcon"
         :description="service.description"
-        :imageTools="service.imageTools"
+        :tools="service.tools"
       />
     </ul>      
     </div>

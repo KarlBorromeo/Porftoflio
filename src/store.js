@@ -46,27 +46,27 @@ const store = createStore({
             services:[
                 {
                     serviceName: 'Web Development',
-                    serviceIcon: 'ICON',
+                    serviceIcon: 'assets/portrait.jpg',
                     description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
-                    imageTools: 'IMAGE'
+                    tools: ['VueJS', 'ExpressJS', 'Firebase'],
                 },
                 {
                     serviceName: 'Mobile App Development',
-                    serviceIcon: 'ICON',
+                    serviceIcon: 'assets/portrait.jpg',
                     description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
-                    imageTools: 'IMAGE'
+                    tools: ['Flutter', 'Android Studio']
                 },
                 {
                     serviceName: 'Engineering Services',
-                    serviceIcon: 'ICON',
+                    serviceIcon: '@/assets/portrait.jpg',
                     description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
-                    imageTools: 'IMAGE'
+                    tools: ['IMAGE']
                 },
                 {
                     serviceName: 'Machine Learning & Deep Learning',
-                    serviceIcon: 'ICON',
+                    serviceIcon: '../../assets/portrait.jpg',
                     description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
-                    imageTools: 'IMAGE'
+                    tools: ['Keras', 'Tensorflow', 'Pytorch']
                 }
             ]
         }
