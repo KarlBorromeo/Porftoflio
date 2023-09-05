@@ -13,21 +13,14 @@
 <script>
 export default {
     props: ['title','description', 'dateFinished', 'outputImages'],
-    computed: {
-      image(){
-        // return this.outputImages
-        return "../../assets/landscape.jpg"
-      }
-    }
 }
 </script>
 
 <style scoped>
 .card{
-    width: 75%;
+    width: 73%;
     margin: 1rem auto;
     border: 1px solid black;
-    /* background-color: red; */
 }
 .card h3{
   margin: .5rem 0;

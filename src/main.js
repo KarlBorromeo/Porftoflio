@@ -11,13 +11,13 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
 import { faTwitter, faInstagram, faFacebook} from '@fortawesome/free-brands-svg-icons'
-import { faBars, faX ,faDiamond} from '@fortawesome/free-solid-svg-icons'
+import { faBars, faX ,faDiamond, faCaretDown, faCaretUp} from '@fortawesome/free-solid-svg-icons'
 
 //import header component
 import TheHeader from './components/subComp/header/TheHeader.vue'
 import ContactCard from './components/subComp/footer/ContactCard.vue'
 
-library.add(faTwitter,faInstagram, faFacebook, faBars,faX, faDiamond)
+library.add(faTwitter,faInstagram, faFacebook, faBars,faX, faDiamond, faCaretDown,faCaretUp)
 const app = createApp(App);
 
 app.use(store)

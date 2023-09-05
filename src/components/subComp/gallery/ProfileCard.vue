@@ -33,7 +33,7 @@
   
   <style scoped>
   .card{
-      width: 75%;
+      width: 73%;
       margin: 1rem auto;
       border: 1px solid black;
       /* background-color: red; */
