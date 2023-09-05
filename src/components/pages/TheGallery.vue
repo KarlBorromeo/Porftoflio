@@ -2,7 +2,7 @@
     <the-header></the-header>
     <div class="container">
       <div @click="toggleProjects" class="dropdownProjects" :class="{shadedProj: shadedProj}">
-        <h5>Show Projects</h5>
+        <h5 class="buttonText">Show Projects</h5>
         <font-awesome-icon icon = "fa-solid fa-caret-down" size="1x" v-if="!isProjectVisible"/>
         <font-awesome-icon icon = "fa-solid fa-caret-up" size="1x"  v-if="isProjectVisible"/>
       </div>
@@ -17,7 +17,7 @@
       </ul>
 
       <div @click="toggleProfile" class="dropdownProfiles" :class="{shadedProf: shadedProf}">
-        <h5>Developers and Engineers</h5>
+        <h5 class="buttonText">Developers and Engineers</h5>
         <font-awesome-icon icon = "fa-solid fa-caret-down" size="1x" v-if="!isProfileVisible"/>
         <font-awesome-icon icon = "fa-solid fa-caret-up" size="1x"  v-if="isProfileVisible"/>
       </div>
@@ -94,7 +94,10 @@ export default {
   border-radius: 10px;
 }
 .shadedProj,.shadedProf{
-  background-color: rgba(210, 187, 187, 0.619);
+  background-color: rgba(210, 187, 187, 0.405);
   font-weight: 900;
+}
+.buttonText{
+  font-size: clamp(1rem, 2.5vw, 2rem);
 }
 </style>

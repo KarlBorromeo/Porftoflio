@@ -15,9 +15,6 @@ export default {
 </script>
 
 <style scoped>
-div{
-  box-sizing:border-box;
-}
 .featured-image{
     background-image: url('../../assets/man.jpg');
     background-repeat: no-repeat;

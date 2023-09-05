@@ -51,8 +51,8 @@
     gap: .5rem;
   }
   img{
-  width: 7vw;
-  height: 7vw;
+  width: 10vw;
+  height: 10vw;
   min-width: 50px;
   min-height: 50px;
   border-radius: 100%;
@@ -73,7 +73,7 @@
     font-size: clamp(.8rem, 2vw, 1.5rem);
   }
   p{
-    font-size: clamp(.9rem, 1.5vw, 1.5rem);
+    font-size: clamp(.8rem, 1.5vw, 1.5rem);
     line-height: 1.3rem;
   }
   @media screen and (min-width: 768px) {

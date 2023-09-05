@@ -30,28 +30,16 @@
           into reality.
         </P>
       </section>
-      <!-- <section class="grid-5 grid-item">
-        <h4>Mission</h4>
-        <P>Our misison is simple yet profound: Empower business
-          with the digital tools they need to thrive in today's
-          competetive online world. We believe that knowledge, innovation,
-          and collaboration are cornerstones of success.
-        </P>
-      </section> -->
   </article>
   </div>
-  
-  <!-- <img src="../../assets/aw.jpg"> -->
 </template>
 
 <script>
 export default {
   methods: {
-    show(){
+    async show(){
       const grids = document.querySelectorAll('.grid-item')
       
-      
-      async function delayAnimation(){
         for(let i = 0; i<grids.length; i++){
           
           if(i%2 === 0){
@@ -60,9 +48,7 @@ export default {
             grids[i].classList.add('grid-item-right')
           }
           await new Promise(resolve => setTimeout(resolve, 300))
-        }
       }
-      delayAnimation();
     }
   },
   mounted(){
@@ -77,6 +63,9 @@ export default {
 div{
   padding: 1rem 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 div h2{
   padding: 1rem;
@@ -95,11 +84,11 @@ div h2{
   max-width: 500px;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
   text-align: center;
   /* color: white; */
   visibility: hidden;
-  font-size: clamp(.8rem, 1.5vw, 3rem);
+  font-size: clamp(.8rem, 1.5vw, 1.5rem);
+  line-height: 1.1rem;
 }
 
 .grid-item-left{
@@ -141,5 +130,10 @@ div h2{
   .service{
     grid-template-columns: 1fr 1fr;
   }
+  .grid-1,.grid-2,.grid-3,.grid-4{
+    line-height: 1.5rem;
+  }
 }
+
+
 </style>

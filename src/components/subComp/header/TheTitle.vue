@@ -87,6 +87,7 @@ export default {
         align-items: center;
         box-shadow: 0 0 10px 1px black;
         background-color: rgba(255, 0, 0, 0.459);
+        animation: shine .8s ease-in-out alternate infinite;
     }
     .button div section{
         color: white;
@@ -100,11 +101,11 @@ export default {
         /* transform: translateX(10px) */
     }
     .button div:hover{
-        animation: shine 0.5s ease-in forwards;
+        animation: shine 0.5s ease-in-out alternate;
     }
 
     @keyframes shine {
         0%{box-shadow: 0px 0px 0px 0px #2afc009e}
-        100%{box-shadow: 0px 0px 20px 3px #2afc0078}
+        100%{box-shadow: 0px 0px 20px 5px #2afc0078}
     }
 </style>

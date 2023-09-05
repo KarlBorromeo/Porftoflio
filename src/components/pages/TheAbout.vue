@@ -59,4 +59,14 @@ h3{
     line-height: 2em;
   }
 }
+@media screen and (min-width: 412px) and (min-height: 915px) {
+  p{
+    line-height: 2.5em;
+  }
+}
+@media screen and (min-width: 768px) and (min-height: 1024px) {
+  p{
+    line-height: 3em;
+  }
+}
 </style>

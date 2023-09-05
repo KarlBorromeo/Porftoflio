@@ -64,7 +64,7 @@ h5{
     padding: .5rem 0 ;
   }
 p{
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-size: clamp(.8rem, 1.5vw, 1.5rem);
     line-height: 1.3rem;
 }
 .images{
@@ -81,8 +81,8 @@ p{
 }
 img{
   box-sizing: border-box;
-  width: 35vw;
-  height: 35vw;
+  width: 30vw;
+  height: 30vw;
   min-height: 200px;
   min-width: 200px;
   border-radius: 5px;
