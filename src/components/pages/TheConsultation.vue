@@ -127,7 +127,7 @@ form{
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.638);
   box-sizing: border-box;
@@ -137,7 +137,7 @@ form{
 .style-form{
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   width: 90%;
 }
 #name, #email, #description{

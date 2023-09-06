@@ -32,7 +32,7 @@
   align-items: center;
   height: 80vh;
   gap: 1rem;
-  animation: fadein .3s ease-in forwards;
+  animation: fadein .5s ease-in forwards;
 }
 @keyframes fadein {
   0%{opacity: 0;}

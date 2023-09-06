@@ -39,7 +39,6 @@ export default {
     width: 80%;
     min-width: 300px;
     margin: 1rem auto;
-    /* border: 1px solid black; */
     padding: 1rem;
     box-sizing: border-box;
 }
