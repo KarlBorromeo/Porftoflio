@@ -87,6 +87,9 @@ img{
   min-width: 200px;
   border-radius: 5px;
 }
+img:hover{
+  scale: 1.2;
+}
 @media screen and (min-width: 768px) {
   p{
     line-height: 1.5rem;

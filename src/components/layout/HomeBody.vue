@@ -29,7 +29,10 @@
           Contact us today to discuss how we can turn your web aspirations
           into reality.
         </P>
+        
       </section>
+      <!------------------------------------------------------>
+      
   </article>
   </div>
 </template>
@@ -37,25 +40,32 @@
 <script>
 export default {
   methods: {
-    async show(){
+    animateShow(){
       const grids = document.querySelectorAll('.grid-item')
-      
-        for(let i = 0; i<grids.length; i++){
-          
-          if(i%2 === 0){
-            grids[i].classList.add('grid-item-left')
-          }else{
-            grids[i].classList.add('grid-item-right')
-          }
-          await new Promise(resolve => setTimeout(resolve, 300))
-      }
+      const observer = new IntersectionObserver(entries =>
+        {  
+          entries.forEach((entry,index) => {
+            const classCSS = index%2===0 ? 'grid-item-left' : 'grid-item-right';
+            if(entry.isIntersecting){
+              console.log(classCSS)
+              entry.target.classList.add(classCSS)
+              observer.unobserve(entry.target)
+            }
+          })
+        },
+        {
+          threshold: .5,
+        }
+      )
+
+      grids.forEach(grid=> 
+      {
+        observer.observe(grid)
+      });
     }
   },
   mounted(){
-    this.show();
-    const targetElement = document.getElementById('borderBody')
-    const rect = targetElement.getBoundingClientRect();
-    console.log(rect)
+    this.animateShow();
   }
 }
 </script>

@@ -31,9 +31,14 @@
   justify-content: center;
   align-items: center;
   height: 80vh;
-  /* border: 1px solid black; */
   gap: 1rem;
+  animation: fadein .3s ease-in forwards;
 }
+@keyframes fadein {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
 .indent{
   width: 1.5rem;
   display: inline-block

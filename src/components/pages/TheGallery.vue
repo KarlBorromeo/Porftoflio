@@ -86,16 +86,18 @@ export default {
 .dropdownProjects,.dropdownProfiles{
   width: 75%;
   margin: 1rem auto;
-  border: 2px solid black;
+  border: .5px solid black;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
+  /* box-shadow: 0 0 3px 1px black; */
 }
 .shadedProj,.shadedProf{
-  background-color: rgba(210, 187, 187, 0.405);
-  font-weight: 900;
+  box-shadow: 0 3px 3px 2px rgba(0, 0, 0, 0.693);
+  background-color: rgba(255, 255, 255, 0.638);
+  /* font-weight: 900; */
 }
 .buttonText{
   font-size: clamp(1rem, 2.5vw, 2rem);

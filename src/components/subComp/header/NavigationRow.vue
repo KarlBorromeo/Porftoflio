@@ -1,9 +1,9 @@
 <template>
   <span>
     <ul class="nav-rows">
-      <router-link to="/about">About</router-link>
       <router-link to="/gallery">Gallery</router-link>
       <router-link to="/services">Services</router-link>
+      <router-link to="/about">About</router-link>
       <router-link to="/consultation">Book a Consultation</router-link>
       </ul>
   </span>
