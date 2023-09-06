@@ -48,7 +48,7 @@ export default {
         font-weight: bolder;
         font-size: clamp(1.5rem,5vw,5em);
         color: white;
-        text-shadow: 5px 10px 1px rgba(0, 0, 0, 0.5)
+        text-shadow: 0px 2px 10px#2afc00ae;
     }
     .description{
         display:flex;
@@ -65,7 +65,7 @@ export default {
     }
     .description p{
         line-height: 2;
-        font-size: clamp(1rem,1vw,5rem);
+        font-size: clamp(1rem,1.8vw,2rem);
         width: max(50%, 300px);
         /* border: 1px solid white; */
     }

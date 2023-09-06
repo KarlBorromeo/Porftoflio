@@ -50,7 +50,7 @@ export default {
 <style scoped>
 .animated{
   visibility: visible;
-  animation: animate .8s ease-in forwards;
+  animation: animate .5s ease-in forwards;
 }
 @keyframes animate {
   0%{

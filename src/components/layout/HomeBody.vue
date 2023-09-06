@@ -70,15 +70,18 @@ export default {
 }
 </script>
 <style scoped>
-div{
+#borderBody{
   padding: 1rem 0;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
+  gap: .5rem;
+  min-height: 400px;
 }
-div h2{
+#borderBody h2{
   padding: 1rem;
+  font-size: clamp(1.3rem, 2.2vw, 2.2rem);
 }
 .service{
     display: grid;

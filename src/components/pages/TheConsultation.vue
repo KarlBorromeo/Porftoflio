@@ -189,7 +189,7 @@ button:active{
 }
 .disableButton{
   background-color: transparent;
-  box-shadow: 0 1px 3px 1px black;
+  box-shadow: 0 1px 3px 1px red;
   border: 1px solid red;
   color: red;
 }
