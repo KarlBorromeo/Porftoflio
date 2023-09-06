@@ -3,6 +3,10 @@ import {createStore} from 'vuex'
 const store = createStore({
     state(){
         return{
+            //emailjs info
+            //contact-service == SERVICE-ID
+
+
             //for gallery projects
             shadedProj: true,
             shadedProf: true,
@@ -114,6 +118,9 @@ const store = createStore({
             state.isProfileVisible = !state.isProfileVisible
             state.shadedProf = !state.shadedProf
         }
+    },
+    actions:{
+        
     },
     getters: {
         returnTitle(state){

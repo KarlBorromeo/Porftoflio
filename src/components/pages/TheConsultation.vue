@@ -3,7 +3,8 @@
     <the-header style="background-image: none; background-color: transparent;"></the-header>
     
     <article class="card">
-        <form @submit.prevent="submit">
+        <loading-screen v-if="isLoading"></loading-screen>
+        <form @submit.prevent="submit" v-if="!isLoading && !isRequestError">
           <h3>Consultation Form</h3>  
           <section class="style-form">
             <label for="name">Full Name</label>
@@ -42,14 +43,22 @@
             <p v-if="!checkAll" class="errorMessage">Complete all details required...</p>
             <button :disabled="!checkAll" :class="{disableButton:!checkAll}">Send now</button>
           </section>
-      </form>
+        </form>
+        <succesfull-modal v-if="showSucces"></succesfull-modal>
+        <error-modal v-if="isRequestError && !isLoading" @close-button="close"></error-modal>
     </article>
   </div>
   <contact-card></contact-card>
 </template>
 
 <script>
-export default {
+import emailjs from 'emailjs-com';
+import LoadingScreen from '../subComp/reusable/LoadingScreen.vue';
+import ErrorModal from '../subComp/reusable/ErrorModal.vue';
+import SuccesfullModal from '../subComp/reusable/SuccesfulModal.vue';
+export default 
+  {
+    components: { LoadingScreen, ErrorModal, SuccesfullModal },
     data(){
       return{
           isError: false,
@@ -60,12 +69,44 @@ export default {
           fullnameBool: true,
           emailBool: true,
           descriptionBool: true,
+
+          //emailjs info
+          publicKey: 'W4AFbyvKTJ6KVntiJ',  //in profile EMAILJS
+          serviceId: 'service_32p9jw8',
+          templateId: 'template_60n8j8j',
+
+          //loading screen
+          isLoading: false,
+          isRequestError: false,
+          showSucces: false,
+
       }
     },
     methods: {
-      submit(){
-          //REQUEST API
-          this.resetData()
+      async submit(){
+          this.isLoading = true;
+          const payload = {
+            fullname: this.fullname,
+            email: this.email,
+            service: this.service,
+            description: this.description
+          }
+          try{
+            const response = await emailjs.send(this.serviceId,this.templateId, payload)
+            if(response.text == 'OK'){
+              console.log('SUCCESFULL SENDING')
+              this.resetData()
+              this.showSucces = true
+              await new Promise(resolve => setTimeout(resolve, 3000));
+              this.showSucces = false
+            }else{
+              throw new Error("Something wrong")
+            }
+          }catch(error){
+            console.log(error)
+            this.isRequestError = true
+          }
+          this.isLoading = false
       },
       resetData(){
           this.fullname= ''
@@ -73,8 +114,9 @@ export default {
           this.service= 'web development'
           this.description= ''
       },
-      clicked(){
-        console.log('Clicked')
+      close(bool){
+        console.log(bool)
+        this.isRequestError = bool
       }
     },
     computed:{
@@ -88,6 +130,9 @@ export default {
         }
       }
     },
+    created(){
+      emailjs.init(this.publicKey)
+    }
   }
 </script>
 
@@ -101,6 +146,7 @@ export default {
   background-position: top right ;
 }
 .card{
+  /* position: relative; */
   width: 100%;
   height: 80vh;
   display: flex;
@@ -120,7 +166,7 @@ h3{
   text-transform: uppercase;
 }
 form{
-  position: relative;
+  /* position: relative; */
   width: 80%;
   height: 95%;
   max-height: 500px;
@@ -197,4 +243,6 @@ button:active{
   color: red;
   font-weight: 700;
 }
+/*loading spinner style below */
+
 </style>
