@@ -1,7 +1,7 @@
 <template>
     <div class="card">
       <header>
-        <img :src="image" alt="CANNOT LOAD IMAGE"><h5>{{ name }}</h5>
+        <h5>{{ name }}</h5><img :src="image" alt="CANNOT LOAD IMAGE">
       </header>
       <h6>{{ degree }}</h6>
       <p><span class="indent"/>{{ description }}</p>  
@@ -12,20 +12,19 @@
   </template>
   
   <script>
-  import portraitImage from '@/assets/portrait.jpg';
-  import landscapeImage from '@/assets/landscape.jpg'
-  import awImage from '@/assets/aw.jpg'
+  import Karl from '@/assets/profiles/karl.jpg'
+  import Reynard from '@/assets/profiles/reynard.jpg'
 
   export default {
       props: ['name','degree','description','expertise','profileImage'],
       computed: {
         image(){
-          if(this.profileImage === 'aw'){
-            return awImage;
-          }else if(this.profileImage === 'portrait'){
-            return portraitImage
+          if(this.profileImage === 'karl'){
+            return Karl;
+          }else if(this.profileImage === 'jhaerix'){
+            return Karl;
           }else{
-            return landscapeImage
+            return Reynard;
           }
         }
       },
@@ -49,6 +48,12 @@
     align-items: center;
     padding: .5rem 0;
     gap: .5rem;
+    flex-direction: row-reverse;
+    justify-content: start;
+  }
+  .card header h5:hover + img{
+    scale: 1.2;
+    border: 1px solid black;
   }
   img{
   width: 10vw;
@@ -56,6 +61,11 @@
   min-width: 50px;
   min-height: 50px;
   border-radius: 100%;
+  box-sizing: border-box;
+  }
+  img:hover{
+    scale: 1.2;
+    border: 1px solid black;
   }
   .indent{
     display: inline-block;

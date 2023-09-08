@@ -33,6 +33,9 @@ button{
         border: none; 
         font-weight: 600;
     }
+button:hover{
+    background-color: #2afc0078;
+}
 h3,p{
     color: white;
     font-weight: 500;

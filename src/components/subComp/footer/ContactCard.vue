@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h3>{{ title}}</h3>
+      <h3 @click="home">{{ title}}</h3>
       <section class="contact">
         <p>lrakborromeo@gmail.com</p>
         <P>+639388534616</P>
@@ -19,6 +19,11 @@
     computed:{
       title(){
         return this.$store.getters.returnTitle
+      }
+    },
+    methods: {
+      home(){
+        this.$router.push('/home')
       }
     }
   }

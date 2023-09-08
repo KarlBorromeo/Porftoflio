@@ -8,9 +8,7 @@
             Your gateway to innovative web solutions!
         </p>
     </article>
-    <article class="button">
-        <!-- <button><span>Book and Consultation</span></button> -->
-        <!-- <font-awesome-icon class="diamond" icon="fa-icon fa-diamond" size="8x" bounce/> -->
+    <article class="button" @click="book">
         <div>
             <section>
                 Book<br>a<br>Consultation
@@ -26,6 +24,11 @@ export default {
       title(){
         return this.$store.getters.returnTitle
       }
+    },
+    methods: {
+        book(){
+            this.$router.push('/consultation')
+        }
     }
 }
 </script>

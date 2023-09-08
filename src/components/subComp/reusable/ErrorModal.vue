@@ -18,7 +18,7 @@ export default {
     methods:{
         close(){
             console.log('clicked')
-            this.$emit('close-button',false)
+            this.$store.commit('isRequestError',false)
         }
     }
 }
@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
 .back{
-    background-color: rgba(255, 255, 255, 0.638);
+    background-color: rgba(255, 255, 255, 0.419);
     height: 100%;
     display: absolute;
     position: fixed;

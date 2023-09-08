@@ -2,7 +2,7 @@
     <the-header></the-header>
     <div class="container">
       <div @click="toggleProjects" class="dropdownProjects" :class="{shadedProj: shadedProj}">
-        <h5 class="buttonText">Show Projects</h5>
+        <h5 class="buttonText">Show Developers' Capabilities</h5>
         <font-awesome-icon icon = "fa-solid fa-caret-down" size="1x" v-if="!isProjectVisible"/>
         <font-awesome-icon icon = "fa-solid fa-caret-up" size="1x"  v-if="isProjectVisible"/>
       </div>

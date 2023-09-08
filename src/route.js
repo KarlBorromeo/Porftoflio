@@ -15,7 +15,17 @@ const router = createRouter({
         {path: '/services', component: TheServices},
         {path: '/gallery', component: TheGallery},
         {path: '/consultation', component: TheConsultation},
-    ]
+    ],
+    scrollBehavior(to, from, savedPosition) {
+        // Scroll to the top of the page when navigating to a new route
+        console.log(to,from,savedPosition)
+        if(savedPosition){
+            return savedPosition
+        }else{
+            return { left: 0, top: 0 };
+        }
+        
+      },
 })
 
 export default router;

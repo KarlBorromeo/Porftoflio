@@ -45,14 +45,14 @@
           </section>
         </form>
         <succesfull-modal v-if="showSucces"></succesfull-modal>
-        <error-modal v-if="isRequestError && !isLoading" @close-button="close"></error-modal>
+        <error-modal v-if="isRequestError && !isLoading" ></error-modal>
     </article>
   </div>
   <contact-card></contact-card>
 </template>
 
 <script>
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
 import LoadingScreen from '../subComp/reusable/LoadingScreen.vue';
 import ErrorModal from '../subComp/reusable/ErrorModal.vue';
 import SuccesfullModal from '../subComp/reusable/SuccesfulModal.vue';
@@ -69,44 +69,23 @@ export default
           fullnameBool: true,
           emailBool: true,
           descriptionBool: true,
-
-          //emailjs info
-          publicKey: 'W4AFbyvKTJ6KVntiJ',  //in profile EMAILJS
-          serviceId: 'service_32p9jw8',
-          templateId: 'template_60n8j8j',
-
-          //loading screen
-          isLoading: false,
-          isRequestError: false,
-          showSucces: false,
-
       }
     },
     methods: {
       async submit(){
           this.isLoading = true;
-          const payload = {
+          const payload= {
             fullname: this.fullname,
             email: this.email,
             service: this.service,
             description: this.description
           }
-          try{
-            const response = await emailjs.send(this.serviceId,this.templateId, payload)
-            if(response.text == 'OK'){
-              console.log('SUCCESFULL SENDING')
-              this.resetData()
-              this.showSucces = true
-              await new Promise(resolve => setTimeout(resolve, 3000));
-              this.showSucces = false
-            }else{
-              throw new Error("Something wrong")
-            }
-          }catch(error){
-            console.log(error)
-            this.isRequestError = true
+          this.$store.dispatch('submit',payload)
+
+          if(this.$store.getters.isReset){
+            this.resetData()
           }
-          this.isLoading = false
+          
       },
       resetData(){
           this.fullname= ''
@@ -114,10 +93,6 @@ export default
           this.service= 'web development'
           this.description= ''
       },
-      close(bool){
-        console.log(bool)
-        this.isRequestError = bool
-      }
     },
     computed:{
       checkAll(){
@@ -128,11 +103,21 @@ export default
           console.log("NOT ALL OK")
           return false
         }
+      },
+      isLoading(){
+        return this.$store.getters.isLoading
+      },
+      isRequestError(){
+        return this.$store.getters.isRequestError
+      },
+      showSucces(){
+        return this.$store.getters.showSucces
       }
+
     },
-    created(){
-      emailjs.init(this.publicKey)
-    }
+    // created(){
+    //   emailjs.init(this.publicKey)
+    // }
   }
 </script>
 
@@ -146,12 +131,12 @@ export default
   background-position: top right ;
 }
 .card{
-  /* position: relative; */
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 h3{
   font-size: clamp(1rem, 1.5vw, 2rem); 
@@ -166,17 +151,14 @@ h3{
   text-transform: uppercase;
 }
 form{
-  /* position: relative; */
   width: 80%;
-  height: 95%;
-  max-height: 500px;
-  margin: auto;
+  min-height: 85%;
+  margin: 1rem auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.638);
-  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.747);
   gap: .5rem;
   border-radius: 10px;
 }
