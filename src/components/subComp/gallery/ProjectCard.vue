@@ -90,14 +90,8 @@ p{
   justify-content: center;
   justify-items: center;
 }
-ul{
-  width: 30vw;
-  height: 30vw;
-}
 img{
   box-sizing: border-box;
-  /* width: auto;
-  height: auto; */
   width: 30vw;
   height: 30vw;
   min-height: 200px;
