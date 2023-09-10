@@ -23,6 +23,9 @@ export default {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    /* background-color: #b099995b;
+    background-blend-mode: darken; */
+
 }
 @media screen and (min-width: 768px){
   .featured-image{

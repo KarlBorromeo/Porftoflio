@@ -33,7 +33,7 @@ export default {
 
 <style scoped>
 img{
-  min-width: 85px;
+  min-width: 135px;
   width: 15vw;
   max-width: 200px
 }

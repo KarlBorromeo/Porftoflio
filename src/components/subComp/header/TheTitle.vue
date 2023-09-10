@@ -47,10 +47,10 @@ export default {
         justify-content: center;
         align-items: flex-end;
         /* height: 20%; */
-        font-weight: bolder;
-        font-size: clamp(1.5rem,5vw,5em);
+        font-weight: 900;
+        font-size: clamp(2rem,5vw,5em);
         color: white;
-        text-shadow: 0px 2px 10px#2afc00ae;
+        text-shadow: 1px 2px 10px silver;
     }
     .description{
         display:flex;
@@ -58,9 +58,10 @@ export default {
         text-align: center;
         align-items: center;
         /* height: 30%; */
-        font-weight: 500;
+        font-weight: 600;
         color: white;
         padding: 0 3rem;
+        text-shadow: 1px 1px 1px black;
     }
     .description p{
         line-height: 2;
@@ -73,8 +74,8 @@ export default {
         align-items: center;
     }
     .button div{
-        width: 110px;
-        height: 110px;
+        width: 120px;
+        height: 120px;
         border: 3px solid #2afc0094;
         border-radius: 10px;
         transform: rotate(45deg);

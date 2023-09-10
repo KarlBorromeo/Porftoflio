@@ -21,7 +21,8 @@ import reynardThesis2 from '@/assets/projects/reynardThesis2.png'
 import karlThesis1 from '@/assets/projects/karlThesis1.png'
 import karlThesis2 from '@/assets/projects/karlThesis2.png'
 import karlojt1 from '@/assets/projects/karlojt1.png'
-
+import solarpanelCleaner2 from '@/assets/projects/solarpanelCleaner2.png'
+import solarpanelCleaner1 from '@/assets/projects/solarpanelCleaner1.png'
 export default {
     props: ['title','description','outputImages','number'],
     data(){
@@ -42,6 +43,10 @@ export default {
               this.arrayImage.push(karlThesis2)
             }else if(this.outputImages[i] === 'karlojt1'){
               this.arrayImage.push(karlojt1)
+            }else if(this.outputImages[i] === 'solarpanelCleaner1'){
+              this.arrayImage.push(solarpanelCleaner1)
+            }else if(this.outputImages[i] === 'solarpanelCleaner2'){
+              this.arrayImage.push(solarpanelCleaner2)
             }else{
               this.arrayImage.push(landscapeImage)
             }

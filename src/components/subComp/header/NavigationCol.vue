@@ -8,7 +8,7 @@
               </router-link>
               
               <!-- <img src="../../assets/logo2.png"> -->
-              <font-awesome-icon icon = "fa-solid fa-x" size="1x" @click="showCol('hidden',false)"></font-awesome-icon>
+              <font-awesome-icon class="ekis" icon = "fa-solid fa-x" size="1x" @click="showCol('hidden',false)"></font-awesome-icon>
             </header>
             <!-- <span>
                 <img src="../../assets/logo2.png">
@@ -17,7 +17,7 @@
               <router-link to="/about" @click="showCol('hidden',false)">About</router-link>
               <router-link to="/gallery" @click="showCol('hidden',false)">Gallery</router-link>
               <router-link to="/services" @click="showCol('hidden',false)">Services</router-link>
-              <router-link to="/consultation" @click="showCol('hidden',false)">Boox a Consultation</router-link>
+              <!-- <router-link to="/consultation" @click="showCol('hidden',false)">Boox a Consultation</router-link> -->
             </ul>
           </div>
     </span>
@@ -112,7 +112,18 @@ a{
 h3{
   font-weight: 900;
 }
-
+.bars:active{
+  color: rgba(255, 255, 255, 0.319);
+}
+.ekis{
+  padding: .8rem;
+  border-radius: 3px;
+  color: black;
+  background-color: rgba(232, 224, 224, 0.793);
+}
+.ekis:active{
+  background-color: rgba(232, 224, 224, 0.984);
+}
 @keyframes bg-change {
   0%{background-color: transparent;}
   100%{background-color: white;}

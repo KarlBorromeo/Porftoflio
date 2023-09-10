@@ -14,6 +14,7 @@
   <script>
   import Karl from '@/assets/profiles/karl.jpg'
   import Reynard from '@/assets/profiles/reynard.jpg'
+  import Jhaerix from '@/assets/profiles/jhaerix.jpg'
 
   export default {
       props: ['name','degree','description','expertise','profileImage'],
@@ -22,7 +23,7 @@
           if(this.profileImage === 'karl'){
             return Karl;
           }else if(this.profileImage === 'jhaerix'){
-            return Karl;
+            return Jhaerix;
           }else{
             return Reynard;
           }

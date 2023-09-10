@@ -40,14 +40,16 @@ const store = createStore({
                 {
                     id: 'B',
                     title: 'Automatic Notification System',
-                    description: 'lorem lores aaw dfa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw dflorem lores aaw dfa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw df',
+                    description: `Mobile application system that lets the user sets a schedule and mention names that are registered in the system. When the event is
+                                    created the system will automatically notfiy via email about the event. This is realtime-based and can create, delete and update the event.
+                                    `,
                     outputImages: ['karlojt1'],
                 },
                 {
                     id: 'C',
                     title: 'Automated Solar Panel Cleaning System',
                     description: 'lorem lores aaw dfa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw dflorem lores aaw dfa lorem lores aaw lorem lores aaw dfdflorem loresaaw dflorem lores aaw dflorem lores aaw df',
-                    outputImages: ['landscape','aw'],
+                    outputImages: ['solarpanelCleaner1','solarpanelCleaner2'],
                 },
                 {
                     id: 'D',
@@ -62,17 +64,21 @@ const store = createStore({
                     name: 'Engr. Jhaerix Borromeo',
                     expertise: ['Circuit Design','Arduino Programming','PCB Design'],
                     degree: '(BSECE)-Bachelor of Science in Electronics and Communication Engineering',
-                    description: 'aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda',
-                    image: 'aw'
+                    description: `I'm Jhaerix Borromeo, an electronics engineer with a strong foundation 
+                                from Caraga State University. With a passion for innovation and a diverse skill set, 
+                                I specialize in circuit design, PCB layout, microcontroller programming (including embedded C and C++), and 3D design.
+                                My goal is to turn your ideas into reality by providing tailored electronic solutions that meet your specific needs. Whether you're a business looking to optimize your electronic systems or an individual with a unique project in mind, I'm here to bring expertise and creativity to the table. 
+                                Let's collaborate to create cutting-edge electronic solutions that exceed your expectations.`,
+                    image: 'jhaerix'
                 },
                 {
                     name: 'Karl Borromeo',
                     expertise: ['Frontend Developer','Mobile Application Developer','Machine Learning Engineer'],
                     degree: '(BSCS)-Bachelor of Science in Computer Science',
                     description: `Hi, nice to see you here. In order for you to know me a little bit, let me introduce myself. I am passionate and driven individual residing in Cabrera Street, Pasay, Metro Manila. 
-                                    A graduate of Bachelor of Science degree in Computer Science at Caraga State University, 
-                                    I am dedicated to expanding my knowledge and skills in the field of programming and eager to earn more self skills and leadership skills. With a keen interest in software 
-                                    development and other stuff in a related field of programming, I had     proven myself to be a proficient programmer with successfully building an assigned projects and tasks`,
+                                    A graduate of Bachelor of Science degree in Computer Science at Caraga State University. I specialize in programming, designing and problem solving.
+                                    I am dedicated to expanding and applying my knowledge and expertise in the field of programming and eager to earn more programming and leadership skills. With a keen interest in software 
+                                    development and other stuff in a related field of programming, I had proven myself to be a proficient programmer with successfull tasks and projects.`,
                     image: 'karl'
                 },
                 {
@@ -94,25 +100,19 @@ const store = createStore({
             services:[
                 {
                     serviceName: 'Web Development',
-                    serviceIcon: 'portrait',
-                    description: `aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq
-                                  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji
-                                   fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf
-                                    wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda`,
-                    tools: ['VueJS', 'ExpressJS', 'Firebase'],
-                },
-                {
-                    serviceName: 'Mobile App Development',
-                    serviceIcon: 'aw',
-                    description: `aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq
-                                fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq 
-                                fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  
-                                fdasf wqrewq rweqrweqr werfsda`,
-                    tools: ['Flutter', 'Android Studio']
+                    serviceIcon: 'webdev',
+                    description: `We specialize in transforming your ideas into user-friendly and intuitive websites. 
+                                    Our approach blends creativity and technical expertise to bring your vision to life. 
+                                    Whether you're starting from scratch or looking to revamp your online presence, 
+                                    we're here to guide you through every step of the process.Boost your online visibility 
+                                    and engage your audience with our web development solutions. 
+                                    From wireframing and prototyping to responsive design, we ensure your website 
+                                    not only looks great but also delivers exceptional user experiences.`,
+                    tools: ['Portfolios','E-Commerce Solutions'],
                 },
                 {
                     serviceName: 'Engineering Services',
-                    serviceIcon: 'landscape',
+                    serviceIcon: 'engineering',
                     description: `aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  
                                     fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji 
                                     fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq 
@@ -124,9 +124,10 @@ const store = createStore({
                 },
                 {
                     serviceName: 'Machine Learning & Deep Learning',
-                    serviceIcon: 'aw',
-                    description: `aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  
-                                    fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda aji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsdaaji fdsa ew  fdsa wer wreq  fdasf wqrewq rweqrweqr werfsda`,
+                    serviceIcon: 'ai',
+                    description: `We specialize in harnessing the power of machine learning to drive innovation and deliver
+                                 transformative solutions for businesses across various industries. Our comprehensive Machine Learning Services Portfolio 
+                                    is designed to meet your unique needs and propel your organization into the future of data-driven decision-making.`,
                     tools: ['Keras', 'Tensorflow', 'Pytorch']
                 }
             ]

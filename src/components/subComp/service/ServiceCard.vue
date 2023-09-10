@@ -14,19 +14,19 @@
 </template>
 
 <script>
-  import portraitImage from '@/assets/portrait.jpg';
-  import landscapeImage from '@/assets/landscape.jpg'
-  import awImage from '@/assets/aw.jpg'
+  import webdev from '@/assets/services/webdev.png'
+  import ai from '@/assets/services/ai.png'
+  import engineering from '@/assets/services/engineering.png'
 export default {
     props: ['serviceName', 'serviceIcon', 'description', 'tools'],
     computed: {
         image(){
-          if(this.serviceIcon === 'aw'){
-            return awImage;
-          }else if(this.serviceIcon === 'portrait'){
-            return portraitImage
+          if(this.serviceIcon === 'webdev'){
+            return webdev;
+          }else if(this.serviceIcon === 'ai'){
+            return ai
           }else{
-            return landscapeImage
+            return engineering
           }
         }
       },
