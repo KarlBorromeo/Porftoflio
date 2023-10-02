@@ -34,11 +34,14 @@
       <!------------------------------------------------------>
       
   </article>
+  <messenger-chat></messenger-chat>
   </div>
 </template>
 
 <script>
+import MessengerChat from '../subComp/MessengerChat.vue'
 export default {
+  components: {MessengerChat},
   methods: {
     animateShow(){
       const grids = document.querySelectorAll('.grid-item')
